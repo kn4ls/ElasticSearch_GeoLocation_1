@@ -1,4 +1,4 @@
-# ElasticSearc_GeoLocation_1
+# ElasticSearch_GeoLocation_1
 
 Example Spring boot 1.3.0 + ElaticSearch + Geolocation (string geo-points are "latitude,longitude")
 
