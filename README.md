@@ -4,14 +4,13 @@ Example Spring boot 1.3.0 + ElaticSearch + Geolocation (string geo-points are "l
 
 In this example use the same entity class from ElasticSearch document and H2 table.
 
-```
+```java
 @Entity
 @Document(indexName = "trip")
 @Table(name = "trip")
 public class Trip {
-
 	@Id
-  @GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
 	@Column
@@ -33,11 +32,13 @@ public class Trip {
 
 Create a JpaRepository and ElasticsearchRepository to access data.
 
-```
+```java
 public interface TripRepository extends JpaRepository<Trip, Long>{
 
 }
+```
 
+```java
 public interface TripSearchRepository extends ElasticsearchRepository<Trip, Long>{
 
 }
@@ -45,7 +46,7 @@ public interface TripSearchRepository extends ElasticsearchRepository<Trip, Long
 
 This example run "ApplicationRunner" to load an read data.
 
-```
+```java
 @Component
 public class App implements ApplicationRunner {
 
