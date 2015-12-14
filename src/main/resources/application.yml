@@ -1,0 +1,10 @@
+
+spring:
+    data:
+        elasticsearch:
+            properties:
+                http:
+                    enabled: true
+                path:
+                    logs: target/elasticsearch/log
+                    data: target/elasticsearch/data
